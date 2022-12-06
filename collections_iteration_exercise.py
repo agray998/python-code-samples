@@ -14,13 +14,16 @@ books = {
          "the silmarillion":"j.r.r. tolkien"
         }
 
-while True:
-    user_author = input("Please enter an author: ")
-    if not user_author:
-        break
+def search_for_books(user_author, books):
     if not user_author.lower() in map(str.lower, books.values()): # extra functionality
         print("No books found")
     else: # core solution
         for book, author in books.items():
             if author.lower() == user_author.lower():
                 print(book)
+
+while True:
+    user_author = input("Please enter an author: ")
+    if not user_author:
+        break
+    search_for_books(user_author, books)
