@@ -5,7 +5,7 @@ def square_and_increment(i = 1, x = 0):
     return x
 
 # procedure: may take arguments, may do input/print, doesn't return value
-def greet():
+def greet(): # pragma: no cover
     name = input("Enter your name: ")
     print("Hello,", name)
 
@@ -19,4 +19,4 @@ def sum_of_squares(*args): # **kwargs allows arbitrary keyword arguments
 
 # print(square_and_increment(x = 3))
 # greet()
-print(sum_of_squares(1, 2, 6, 8))
+print(sum_of_squares)

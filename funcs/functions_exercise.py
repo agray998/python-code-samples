@@ -16,10 +16,11 @@ def grade_calc(*scores):
         grade = 'F'
     return avg, grade
 
-scores = []
+if __name__ == '__main__': # pragma: no cover
+    scores = []
 
-while len(scores) < 3:
-    scores.append(int(input("Enter a score: ")))
+    while len(scores) < 3:
+        scores.append(int(input("Enter a score: ")))
 
-avg, grade = grade_calc(*scores)
-print("You scored", f"{avg}%", "and achieved a grade", grade)
+    avg, grade = grade_calc(*scores)
+    print("You scored", f"{avg}%", "and achieved a grade", grade)
